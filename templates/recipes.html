@@ -1,0 +1,159 @@
+{% extends 'base.html' %} {% block content %}
+
+    <section class="light-grayish-cyan three-hundred">
+        <form method="POST">
+        <div class="row">
+            <!-- OPTION SELECT FILTER -->
+            <h5 class="center three-hundred">Recipes: Filter </h5>
+            <!--<div class="input-field col s12 m6 l3">
+                <select name="diet">
+                <optgroup label="Diet">
+                    <option value="" selected data-icon="img/browse.png" class="left">Browse</option>
+                    <option value="1" data-icon="img/unknown.png" class="left">None</option>
+                    <option value="2" data-icon="img/low-carb.png" class="left">Low Carbohydrate</option>
+                    <option value="3" data-icon="img/vegan.png" class="left">Vegan</option>
+                    <option value="4" data-icon="img/vegetarian.png" class="left">Vegetarian</option>
+                </optgroup>
+                </select>
+                <label>Select diet</label>
+            </div>-->
+
+            <!-- GROUP OPTION SELECT FILTER -->
+            <!--<div class="input-field col s12 m6 l3">
+                <select>
+                <optgroup label="Cuisine">
+                    <option value="" disabled selected data-icon="img/browse.png" class="left">Browse</option>
+                    <option value="1" data-icon="img/unknown.png" class="left">Unknown</option>
+                    <option value="2" data-icon="img/asia.png" class="left">Asian</option>
+                    <option value="3" data-icon="img/latin.png" class="left">Latin</option>
+                    <option value="4" data-icon="img/usa.png" class="left">USA</option>
+                    <option value="5" data-icon="img/europe.png" class="left">European</option>
+                    <option value="6" data-icon="img/african.png" class="left">African</option>
+                </optgroup>
+                <optgroup label="Select All">
+                    <option value="7" data-icon="img/world.png" class="left">All</option>
+                </optgroup>
+                </select>
+                <label>Select Cuisine</label>
+            </div>-->
+
+            <!-- MULTIPLE SELECT FILTER -->
+            <!--<div class="input-field col s12 m6 l3">
+                <select multiple>
+                <optgroup label="Allergen">
+                    <option value="" disabled selected data-icon="img/select-all.png" class="left">Select
+                    </option>
+                    <option value="2" data-icon="img/nuts.png" class="left">Nuts</option>
+                    <option value="3" data-icon="img/broken-egg.png" class="left">Eggs</option>
+                    <option value="4" data-icon="img/soy.png" class="left">Soy</option>
+                    <option value="5" data-icon="img/cow.png" class="left">Dairy</option>
+                    <option value="6" data-icon="img/Crustacean-2.png" class="left">Crustacean</option>
+                    <option value="7" data-icon="img/gluten.png" class="left">Gluten</option>
+                    <option value="8" data-icon="img/fish-1.png" class="left">Fish</option>
+                </optgroup>
+                </select>
+                <label>Exclude Allergens</label>
+            </div>-->
+
+            <!-- OPTION SELECT FILTER -->
+            <!--<div class="input-field col s12 m6 l3">
+                <select>
+                <optgroup label="Author">
+                    <option value="" disabled selected data-icon="img/browse.png" class="left">Browse</option>
+                    <option value="1" data-icon="img/author-2.png" class="left">Joe Smith</option>
+                    <option value="2" data-icon="img/author-2.png" class="left">Bob Cobb</option>
+                    <option value="3" data-icon="img/author-2.png" class="left">Jane Lowe</option>
+                </optgroup>
+                </select>
+                <label>Select Author</label>
+            </div>-->
+
+        <!-- <h5 class="three-hundred center">Recipe Counter</h5> -->
+            <div class="input-field col s12 m6 l3">
+                <!-- RECIPE COUNTER -->
+                <div>
+                    Enter amount of recipes to show:
+                    <div class="input-field inline">
+                        <input  type="text" name="limit" placeholder="#12" value="{{ limit }}">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SUBMIT BUTTONS -->
+        <div class="row">
+            <div class="input-field col s12 m6 l3">
+            <div class="card-action">
+                <button class="btn background">Submit</button>
+                <a href="{{ url_for('recipes') }}" class="btn blac-3">Clear</a>
+            </div>
+            </div>
+        </div>
+        
+        </form>
+    </section>
+
+
+
+    <!-- RECIPE GALLERY: FIRST ROW -->
+    <section class="section three-hundred center light-grayish-cyan">
+        <div class="row">
+            <h5 class="three-hundred">Author: All</h5>
+            {% for recipe in recipes %}
+                <!-- IMAGE CARD -->
+                <article class="col s12 m6 l3">
+                    <a href="{{ url_for('view', id=recipe._id) }}">
+                        <img src="{{ recipe.image }}" width="800" height="600" alt="" class="responsive-img">
+                    </a>
+                    <div>
+                        <span class="title truncate">{{ recipe.recipe }}</span>
+                        <p class="truncate">{{ recipe.date }} {{ recipe.time }}</p>
+                        {% if recipe.email == session['email'] %}
+                            <a href="{{ url_for('edit', id=recipe._id) }}" class="approve green-text">
+                                <i class="material-icons blac-2">edit</i>
+                            </a>
+                        {% endif %}
+                        <a href="{{ url_for('like', id=recipe._id) }}" class="stats">
+                            {{ recipe.likes }}
+                            <i class="material-icons blac-2 stats__icon stats__icon--like">thumb_up</i>
+                        </a>
+                        <a href="{{ url_for('dislike', id=recipe._id) }}" class="stats">
+                            {{ recipe.dislikes }}
+                            <i class="material-icons blac-2 stats__icon">thumb_down</i>
+                        </a>
+                        <a href="{{ url_for('view', id=recipe._id) }}" class="subheader stats">
+                            {{ recipe.views }}
+                            <i class="material-icons blac-2 stats__icon">visibility</i>
+                        </a>
+                    </div>
+                </article>
+            {% endfor %} 
+        </div>
+    </section>
+
+    <div class="section">
+        <div class="row">
+        <!-- PAGINATION -->
+            <div class="center">
+                <ul class="pagination">
+                    <li {% if page==1 %} class="disabled" {% endif %}>
+                        <a {% if page>1 %}href="{{ url_for('account', page=page-1) }}"{% endif %}>
+                            <i class="material-icons">chevron_left</i>
+                        </a>
+                    </li>
+                    {% for page in pages %}
+                        <li class="active">
+                            <a href="{{ url_for('recipes', page=page) }}">{{ page }}</a>
+                        </li>
+                    {% endfor %}
+                    <li {% if page==maximum %} class="disabled" {% endif %}>
+                        <a {% if page!=maximum %}href="{{ url_for('account', page=page + 1) }}"{% endif %}>
+                            <i class="material-icons">chevron_right</i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

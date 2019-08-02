@@ -1,0 +1,114 @@
+{% extends 'base.html' %} {% block content %}
+
+  <!-- HOME PAGE SLIDER -->
+    <section class="light-grayish-cyan">
+        <div class="row">
+            <div class="col s12 m6 l8" style="margin-top: .5rem">
+                <div class="slider">
+                    <ul class="slides">
+                        <li>
+                            <img src="{{ url_for('static', filename='img/antioxidant-carrot-diet-33307.jpg') }}" alt="carrot">
+                            <!-- CENTER ALIGN CAPTION -->
+                            <div class="caption center-align">
+                                <h3 class="white-text">Simply Green</h3>
+                                <h5 class="white-text three-hundred">Deliciousness Jumping into the Mouth</h5>
+                            </div>
+                        </li>
+
+                        <li>
+                            <img src="{{ url_for('static', filename='img/bell-pepper-close-up-couscous-1438540.jpg') }}" alt="couscous">
+                            <!-- LEFT ALIGN CAPTION -->
+                            <div class="caption left-align">
+                                <h3 class="white-text">Speak with the Taste</h3>
+                                <h5 class="white-text three-hundred">The Pleasure of Variety on Your Plate</h5>
+                            </div>
+                        </li>
+
+                        <li>
+                            <img src="{{ url_for('static', filename='img/appetizer-close-up-cucumber-406152.jpg') }}" alt="cucumber">
+                            <!-- RIGHT ALIGN CAPTION -->
+                            <div class="caption right-align">
+                                <h3 class="white-text">Better Food Better Mood</h3>
+                                <h5 class="white-text three-hundred">Choose and Taste to Your Place</h5>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- HOW TO GUIDE -->
+            <div class="col s12 m6 l4">
+                <ul class="collection with-header slightly-desaturated-cyan-2">
+                    <li class="collection-header">
+                        <h5>
+                            <span class="slightly-desaturated-cyan">How-to</span>
+                            <span class="blac-2">Guide</span>
+                        </h5>
+                    </li>
+
+                    <!-- STEP ONE -->
+                    <li class="collection-item avatar">
+                        <img src="{{ url_for('static', filename='img/mi-check-box-favicon.png') }}" alt="avatar" class="circle">
+                        <span class="title three-hundred">1. Create an Account</span>
+                        <p class="truncate three-hundred">
+                            Save your recipes and ingredients by creating an account – you can log in
+                            anywhere, including on your phone, tablet or computer.
+                        </p>
+                        <a class="blac-2 modal-trigger three-hundred" href="#modal2"><u>Read More</u></a>
+                    </li>
+
+                    <!-- STEP TWO -->
+                    <li class="collection-item avatar">
+                        <img src="{{ url_for('static', filename='img/mi-check-box-favicon.png') }}" alt="spoon" class="circle">
+                        <span class="title three-hundred">2. Create Your First Recipe</span>
+                        <p class="truncate three-hundred">
+                            Start by selecting ingredients you already have on hand from several categories (such as
+                            meat, seasoning and dairy). From there, you can narrow down your results by selecting the type of meal you
+                            want to make (such as soups, salads, casseroles, you name it), type of cuisine and the star ingredient.
+                        </p>
+                        <a class="blac-2 modal-trigger three-hundred" href="#modal3"><u>Read More</u></a>
+                    </li>
+
+                    <!-- STEP THREE -->
+                    <li class="collection-item avatar">
+                        <img src="{{ url_for('static', filename='img/mi-check-box-favicon.png') }}" alt="database" class="circle">
+                        <span class="title three-hundred">3. Create, Read, Update & Delete</span>
+                        <p class="truncate three-hundred">
+                            Once you get into the habit of using Vegan clip, you’ll probably find yourself doing the 
+                            same things again and again. If you want to save your ingredients and favorite recipes, you can make a
+                            profile.
+                        </p>
+                        <a class="blac-2 modal-trigger three-hundred" href="#modal4"><u>Read More</u></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- RECIPE GALLERY (ONE ROW) -->
+    <section class="center light-grayish-cyan blac-2">
+        <div class="row">
+            <h5 class="blac-2 three-hundred">Highest Views</h5>
+        </div>
+
+        <div class="row--recipes">
+
+            {% for recipe in recipes %}
+                
+                <!-- IMAGE CARD -->
+                <article class="recipe-card">
+                    <a href="{{ url_for('view', id=recipe._id) }}" class="recipe-card__thumbnail-container">
+                        <img src="{{ recipe.image }}" width="800" height="600" class="recipe-card__thumbnail">
+                    </a>
+                    <div class="collection-item avatar">
+                        <span class="title truncate three-hundred">{{ recipe.recipe }}</span>
+                        <p class="truncate three-hundred">{{ recipe.date }} {{ recipe.time }}</p>
+                    </div>
+                </article>
+
+            {% endfor %} 
+        
+        </div>
+    </section>
+
+{% endblock %}

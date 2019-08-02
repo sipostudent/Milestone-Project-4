@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--Let browser know website is optimized for mobile-->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!--Import fontawesome.css-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+        integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous" />
+
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/materialize.min.css') }}" />
+
+    <!--Import favicon-->
+    <link rel="shortcut icon" type="image/png" href="{{ url_for('static', filename='img/seed-plain-favicon.png') }}">
+
+    <!--Import main.css-->
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" />
+    <title>{{ title }}</title>
+</head>
+
+<body class="page-container">
+
+    {% include 'nav.html' %}
+
+    <main class="main">
+        {% block content%}{%endblock%}
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="page-footer whites">
+        <div class="container">
+            <div class="row">
+                <div class="col s12 m6">
+                    <h5>
+                        <span class="slightly-desaturated-cyan">Disclaimer</span>
+                        <span class="blac-2">Notice</span>
+                    </h5>
+                        <p class="slightly-desaturated-cyan-2 three-hundred">Project submission by Sipo Charles for the Code
+                            Institute
+                            diploma in
+                            software, this application is meant for educational purposes only.
+                        </p>
+                </div>
+                <div class="col s12 m4 offset-m2">
+                        <h5>
+                            <span class="slightly-desaturated-cyan">Social</span>
+                            <span class="blac-2">Media</span>
+                        </h5>
+                    <ul class="social">
+                        <li class="social__icon">
+                            <a href="https://twitter.com"target="_blank" aria-label="social media site" rel="noopener" class="slightly-desaturated-cyan-2">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li class="social__icon">
+                            <a href="https://facebook.com" target="_blank" aria-label="social media site" rel="noopener" class="slightly-desaturated-cyan-2">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li class="social__icon">
+                            <a href="https://instagram.com" target="_blank" aria-label="social media site" rel="noopener" class="slightly-desaturated-cyan-2">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li class="social__icon">
+                            <a href="https://youtube.com" target="_blank" aria-label="social media site" rel="noopener" class="slightly-desaturated-cyan-2">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- FOOTER SIGNATURE -->
+        <div class="footer-copyright light-grayish-cyan">
+            <div class="container blac-2">
+                &copy; 2019 Veggit Ltd
+                <a class="right blac-2 subheader">Terms & Conditions</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FIXED ACTION BUTTON -->
+    <div class="fixed-action-btn">
+        <a class="btn-floating btn-large">
+            <i class="material-icons background">add</i>
+        </a>
+        <ul>
+            <li>
+                <a href="#" id="scroll" class="modal-trigger btn-floating">
+                    <i class="material-icons blac-3">expand_less</i>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- ADD USER MODAL -->
+    <div id="user-modal" class="modal">
+        <div class="modal-content">
+            <h4>
+                <span class="slightly-desaturated-cyan">Sign</span>
+                <span class="blac-2">up</span>
+            </h4>
+            <form>
+                <div class="input-field">
+                    <input type="text" id="name">
+                    <label class="slightly-desaturated-cyan-2" for="name">Name</label>
+                </div>
+                <div class="input-field">
+                    <input type="email" id="email">
+                    <label class="slightly-desaturated-cyan-2" for="email">Email</label>
+                </div>
+                <div class="input-field">
+                    <input type="password" id="password">
+                    <label class="slightly-desaturated-cyan-2" for="password">Password</label>
+                </div>
+                <div class="input-field">
+                    <input type="password" id="password2">
+                    <label class="slightly-desaturated-cyan-2" for="password2">Confirm Password</label>
+                </div>
+            </form>
+            <div class="modal-footer">
+                <a href="#!" class="modal-action modal-close btn blue blac-2-2 background">
+                    <span class="blac-2">Submit</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- FIXED FOOTER MODAL 2 -->
+    <div id="modal2" class="modal modal-fixed-footer">
+        <div class="modal-content">
+            <h4>
+                <span class="slightly-desaturated-cyan">Create</span>
+                <span class="blac-2">Account</span>
+            </h4>
+            <ol class="slightly-desaturated-cyan-2 three-hundred">
+                <li>
+                    Start by selecting ingredients you already have on hand from several categories (such as meat, seasoning and
+                    dairy).
+
+                    From there, you can narrow down your resots by selecting the type of meal you want to make (such as soups,
+                    salads, casseroles, you name it), type of cuisine and the star ingredient.
+                </li>
+                <li>
+                    Once you get into the habit of using Vegan clip, you’ll probably find yourself doing the same things again
+                    and
+                    again. If you want to save your ingredients and favorite recipes, you can make a profile.
+                </li>
+                <li>
+                    Search by main ingredient, such as pasta or vegetables, level of difficulty, and recipe type. Keep track of
+                    the
+                    courses you’ve completed, and take advantage of your exclusive access to world-class chefs and instructors.
+                </li>
+            </ol>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat blac-2">Ok</a>
+        </div>
+    </div>
+
+    <!-- FIXED FOOTER MODAL 3 -->
+    <div id="modal3" class="modal modal-fixed-footer">
+        <div class="modal-content">
+            <h4>
+                <span class="slightly-desaturated-cyan">Create</span>
+                <span class="blac-2">Recipe</span>
+            </h4>
+            <ol class="slightly-desaturated-cyan-2 three-hundred">
+                <li>
+                    Start by selecting ingredients you already have on hand from several categories (such as meat, seasoning and
+                    dairy).
+
+                    From there, you can narrow down your resots by selecting the type of meal you want to make (such as soups,
+                    salads, casseroles, you name it), type of cuisine and the star ingredient.
+                </li>
+                <li>
+                    Once you get into the habit of using Vegan clip, you’ll probably find yourself doing the same things again
+                    and
+                    again. If you want to save your ingredients and favorite recipes, you can make a profile.
+                </li>
+                <li>
+                    Search by main ingredient, such as pasta or vegetables, level of difficulty, and recipe type. Keep track of
+                    the
+                    courses you’ve completed, and take advantage of your exclusive access to world-class chefs and instructors.
+                </li>
+            </ol>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat blac-2">Ok</a>
+        </div>
+    </div>
+
+    <!-- FIXED FOOTER MODAL 4 -->
+    <div id="modal4" class="modal modal-fixed-footer">
+        <div class="modal-content">
+            <h4>
+                <span class="slightly-desaturated-cyan">Create,</span>
+                <span class="blac-2">Read,</span>
+                <span class="slightly-desaturated-cyan">
+                    Update
+                    <span class="blac-2">&</span>
+                </span>
+                <span class="blac-2">Delete</span>
+            </h4>
+            <ol class="slightly-desaturated-cyan-2 three-hundred">
+                <li>
+                    Start by selecting ingredients you already have on hand from several categories (such as meat, seasoning and
+                    dairy).
+
+                    From there, you can narrow down your resots by selecting the type of meal you want to make (such as soups,
+                    salads, casseroles, you name it), type of cuisine and the star ingredient.
+                </li>
+                <li>
+                    Once you get into the habit of using Vegan clip, you’ll probably find yourself doing the same things again
+                    and
+                    again. If you want to save your ingredients and favorite recipes, you can make a profile.
+                </li>
+                <li>
+                    Search by main ingredient, such as pasta or vegetables, level of difficulty, and recipe type. Keep track of
+                    the
+                    courses you’ve completed, and take advantage of your exclusive access to world-class chefs and instructors.
+                </li>
+            </ol>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat blac-2">Ok</a>
+        </div>
+    </div>
+
+  <!--Import jQuery before materialize.js-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='js/materialize.min.js') }}"></script>
+
+  <script>
+    // DROPDOWN
+    $(document).ready(function () {
+      $('.dropdown-button').dropdown({
+        constrainWidth: false,
+        hover: true,
+        belowOrigin: true,
+        alignment: 'left'
+      });
+
+      // SIDE NAVIGATION
+      $('.button-collapse').sideNav();
+
+      // INIT MODAL
+      $('.modal').modal();
+
+      // IMAGE SLIDER
+      $('.slider').slider({
+        indicators: true,
+        height: 400,
+        transition: 500,
+        interval: 6000
+      });
+
+      // TRIGGER MODAL
+      $('.modal').modal({
+        dismissible: true,
+        inDuration: 300,
+        outDuration: 200,
+        ready: function (modal, trigger) {
+          console.log('Modal Opened', modal, trigger);
+        }
+      });
+
+      // AUTOCOMPLETE
+      $('.autocomplete').autocomplete({
+        data: {
+          "Low Carbohydrate": null,
+          "Vegan": null,
+          "Vegetarian": null,
+          "Unknown": null,
+          "Asian": null,
+          "Latin": null,
+          "None": null,
+          "USA": null,
+          "European": null,
+          "African": null,
+          "Nuts": null,
+          "Eggs": null,
+          "Soy": null,
+          "Dairy": null,
+          "Crustacean": null,
+          "Gluten": null,
+          "Fish": null,
+        }
+      });
+
+      // FLOAT TO TOP
+
+      $('#scroll').click(function () {
+        $("html, body").animate({
+          scrollTop: 0
+        }, 600);
+        return false;
+      });
+    });
+
+  </script>
+
+  {% if request.endpoint == 'create' or request.endpoint == 'edit' %}
+  
+  
+
+    <script>
+        // DROPDOWN
+        $(document).ready(function () {
+            $('.dropdown-button').dropdown({
+                constrainWidth: false,
+                hover: true,
+                belowOrigin: true,
+                alignment: 'left'
+            });
+
+            // SIDE NAVIGATION
+            $('.button-collapse').sideNav();
+
+            // INIT MODAL
+            $('.modal').modal();
+
+            // IMAGE SLIDER
+            $('.slider').slider({
+                indicators: true,
+                height: 400,
+                transition: 500,
+                interval: 6000
+            });
+
+          
+
+            // HIDE SECTIONS
+            $('.section').hide();
+
+           
+            // INGREDIENT TODO
+            $('#add-ingredient').on('click', function (e) {
+                e.preventDefault();
+
+                // check that blank values cannot be added
+                let val = $('#todo').val();
+                if (val.length < 1) return false;
+
+                const output = `<li class="collection-item">
+				 <div>${$('#todo').val()}
+				   <input value="${$('#todo').val()}" type="hidden" name="ingredient">
+				   <a href="#!" class="secondary-content delete">
+					 <i class="material-icons">close</i>
+				   </a>
+				 </div>
+			   </li>`;
+
+                $('.todos').append(output);
+                Materialize.toast('Ingredient Added', 3000);
+
+                // e.preventDefault();
+            });
+
+            // DELETE INGREDIENT TODO 
+            $('.todos').on('click', '.delete', function (e) {
+                e.preventDefault();
+                $(this).parent().parent().remove();
+                Materialize.toast('Ingredient Removed', 3000);
+
+                // e.preventDefault();
+            });
+
+            // METHOD TODO
+            $('#add-method').on('click', function (e) {
+                e.preventDefault();
+
+				 // check that blank values cannot be added
+                let val = $('#todo-2').val();
+                if (val.length < 1) return false;
+
+                const output = `<li class="collection-item">
+				 <div>${$('#todo-2').val()}
+					<input value="${$('#todo-2').val()}" type="hidden" name="method">
+				   <a href="#!" class="secondary-content delete">
+					 <i class="material-icons">close</i>
+				   </a>
+				 </div>
+			   </li>`;
+
+                $('.method').append(output);
+                Materialize.toast('Method Added', 3000);
+
+                // e.preventDefault();
+            });
+
+            // DELETE METHOD TODO
+            $('.method').on('click', '.delete', function (e) {
+                $(this).parent().parent().remove();
+                Materialize.toast('Method Removed', 3000);
+
+                // e.preventDefault();
+            });
+
+            // CHIPS
+            $('.chips-input').material_chip({
+                placeholder: 'Add Tags',
+				name: 'tags',
+                secondaryPlaceholder: '+tag',
+                autocompleteOptions: {
+                    data: {
+                        'easy': null,
+                        'medium': null,
+                        'hard': null
+                    }
+                }
+            });
+
+            // AUTOCOMPLETE
+            $('.autocomplete').autocomplete({
+                data: {
+                    "Low Carbohydrate": null,
+                    "Vegan": null,
+                    "Vegetarian": null,
+                    "Unknown": null,
+                    "Asian": null,
+                    "Latin": null,
+                    "None": null,
+                    "USA": null,
+                    "European": null,
+                    "African": null,
+                    "Nuts": null,
+                    "Eggs": null,
+                    "Soy": null,
+                    "Dairy": null,
+                    "Crustacean": null,
+                    "Gluten": null,
+                    "Fish": null,
+                }
+            });
+
+            setTimeout(function () {
+                $(document).ready(function () {
+                    // Show sections
+                    $('.section').fadeIn();
+
+                    // Hide preloader
+                    $('.loader').fadeOut();
+
+                    // Init Select
+                    $('select').material_select();
+                    document.querySelectorAll('.select-wrapper').forEach(t => t.addEventListener('click', e=>e.stopPropagation()))
+                   
+
+                });
+            }, 1000);
+        });
+    </script>
+  
+  {% endif %}  
+
+</body>
+
+</html>
