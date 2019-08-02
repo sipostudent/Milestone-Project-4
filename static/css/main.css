@@ -22,7 +22,7 @@ SEARCH BAR NAVIGATION
 /* SEARCH BAR */
 
 .background {
-  background-color: #96d7af !important;
+  background-color: #5fc285 !important;
 }
 
 
@@ -45,7 +45,7 @@ MAIN BAR NAVIGATION
 /* BRAND LOGO TEXT (A) */
 
 .slightly-desaturated-cyan {
-  color: #96d7af;
+  color: #5fc285;
 }
 
 
@@ -59,7 +59,7 @@ MAIN BAR NAVIGATION
 /* LINKS TEXT (C) */
 
 .slightly-desaturated-cyan-2 {
-  color: #96d7af !important;
+  color: #5fc285 !important;
 }
 
 
@@ -74,11 +74,11 @@ i.blac-4 {
 }
 
 li.active {
-  background-color: #96d7af !important;
+  background-color: #5fc285 !important;
 }
 
 i.whites-3 {
-  color: #96d7af !important;
+  color: #5fc285 !important;
 }
 
 
@@ -87,7 +87,7 @@ SIDE BAR NAVIGATION
 ******************/
 
 .background {
-  background-color: #96d7af !important;
+  background-color: #5fc285 !important;
 }
 
 i.whites-2 {
@@ -130,7 +130,7 @@ CHIP TAGS
 ********/
 
 .chip {
-  background-color: #96d7af !important;
+  background-color: #5fc285 !important;
   color: #ffffff !important;
   font-weight: 300;
 }
@@ -163,11 +163,11 @@ PICKER TIME & DATE DISPLAY
 *************************/
 
 .picker__date-display {
-  background-color: #96d7af;
+  background-color: #5fc285;
 }
 
 .picker__day--selected {
-  background-color: #96d7af !important;
+  background-color: #5fc285 !important;
 }
 
 
