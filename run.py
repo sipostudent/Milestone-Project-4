@@ -249,4 +249,5 @@ def register():
 
 # Run App
 if __name__ == '__main__':
-    app.run(host=os.getenv('IP'), port=os.getenv('PORT'), debug=True, use_reloader=False)
+    app.run(host=os.environ.get('IP', '0.0.0.0'),
+            port=os.environ.get('PORT', '5000'))
