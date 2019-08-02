@@ -387,7 +387,7 @@ Deploy your changes, make some changes to the code you just cloned and deploy th
 
 1. Download the project onto a PC and open with a source-code editor.
 
-2. In the run.py file set the IP address and the PORT to the following: :computer:
+2. In the run.py file set the IP address and the PORT to the following:
 
 ```console
 'IP', '127.0.0.1'
