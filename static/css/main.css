@@ -1,0 +1,273 @@
+/*****************
+GOOGLE FONT IMPORT
+*****************/
+
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300,400&display=swap');
+
+/***************
+APPLICATION BODY
+***************/
+
+body {
+  background-color: #eef9f1;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+
+/********************
+SEARCH BAR NAVIGATION
+********************/
+
+
+/* SEARCH BAR */
+
+.background {
+  background-color: #96d7af !important;
+}
+
+
+/* SEARCH BAR ICONS */
+
+i.whites-2 {
+  color: #ffffff !important;
+}
+
+
+/******************
+MAIN BAR NAVIGATION
+******************/
+
+.whites {
+  background-color: #ffffff !important;
+}
+
+
+/* BRAND LOGO TEXT (A) */
+
+.slightly-desaturated-cyan {
+  color: #96d7af;
+}
+
+
+/* BRAND LOGO TEXT (B) */
+
+.blac-2 {
+  color: #000000;
+}
+
+
+/* LINKS TEXT (C) */
+
+.slightly-desaturated-cyan-2 {
+  color: #96d7af !important;
+}
+
+
+/* LINK HOVER TEXT */
+
+.blac-2 {
+  color: #000000;
+}
+
+i.blac-4 {
+  color: #000000 !important;
+}
+
+li.active {
+  background-color: #96d7af !important;
+}
+
+i.whites-3 {
+  color: #96d7af !important;
+}
+
+
+/******************
+SIDE BAR NAVIGATION
+******************/
+
+.background {
+  background-color: #96d7af !important;
+}
+
+i.whites-2 {
+  color: #ffffff !important;
+}
+
+.divider {
+  background-color: #eef9f1 !important;
+}
+
+
+/**************
+BUTTON FLOATING
+**************/
+
+.blac-3 {
+  background-color: #000000 !important;
+}
+
+optgroup {
+  background-color: #eef9f1 !important;
+}
+
+
+/***************
+SELECT DROPDOWNS
+***************/
+
+.select-dropdown {
+  background-color: #eef9f1 !important;
+}
+
+#autocomplete-input {
+  color: #ffffff !important;
+}
+
+
+/********
+CHIP TAGS
+********/
+
+.chip {
+  background-color: #96d7af !important;
+  color: #ffffff !important;
+  font-weight: 300;
+}
+
+
+/*********
+TODO CARDS
+*********/
+
+.whites-4 {
+  color: #ffffff !important;
+}
+
+
+/**************
+FONT WEIGHT 300
+**************/
+
+.three-hundred {
+  font-weight: 300;
+}
+
+.four-hundred {
+  font-weight: 400;
+}
+
+
+/*************************
+PICKER TIME & DATE DISPLAY
+*************************/
+
+.picker__date-display {
+  background-color: #96d7af;
+}
+
+.picker__day--selected {
+  background-color: #96d7af !important;
+}
+
+
+/******
+BUTTONS
+******/
+
+.btn {
+  border-radius: 4px;
+}
+
+
+/*************
+IMAGES & CARDS
+*************/
+
+img,
+.card {
+  border-radius: 4px;
+}
+
+
+/*******************
+GENERAL COLOR (WHITE
+*******************/
+
+.whitit {
+  color: #ffffff !important;
+}
+
+.main {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  flex-grow: 1;
+}
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.row--recipes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, min-content));
+  grid-gap: 1rem;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.recipe-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.recipe-card__thumbnail-container {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  max-width: 300px;
+  overflow: hidden;
+}
+
+.recipe-card__thumbnail {
+  height: 100%;
+  max-height: 300px;
+  width: auto;
+}
+
+.social {
+  display: flex;
+  flex-direction: row;
+}
+
+.social__icon {
+  padding: 1rem;
+}
+
+.social__icon:first-child {
+  padding-left: 0;
+}
+
+.stats {
+  display: inline-flex;
+  align-items: center;
+  color: #4d9067;
+  padding-right: .5rem;
+}
+
+.stats:last-child {
+  padding-right: 0;
+}
+
+.stats__icon {
+  padding-left: .25rem;
+}
+
+.stats__icon--like {
+  margin-bottom: .6rem;
+}
