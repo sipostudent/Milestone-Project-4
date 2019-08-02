@@ -373,7 +373,7 @@ Manual testing was embraced for this application and acceptably passed. An examp
 3. Clone the repository or use the link below.
 
 ```console
-git clone https://github.com/sipostudent/Milestone-Project-3.git
+git clone https://github.com/sipostudent/Milestone-Project-4.git
 ```
 
 Deploy your changes, make some changes to the code you just cloned and deploy them to Heroku using Git.
