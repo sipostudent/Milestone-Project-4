@@ -76,7 +76,26 @@ The core focus of this project is on functional app logic created with **Python*
 
 #### Functionality (User Stories)
 
-#...
+1. Enrollment and login 
+
+2. View every one of the plans 
+
+3. Channel and sort plans 
+
+4. Search through every one of the plans dependent on a catchphrase 
+
+5. Various select menus that permit barring plans containing certain allergen/allergens 
+
+6. Enlisted clients can include plans 
+
+7. Enlisted clients approach their very own Cook Book. Where they can see, alter and erase their plans 
+
+Recipes get added to the application by means of a dynamic structure, that permits to: 
+
+- Include/erase fixings/steps. 
+- Include an image for every recipe recipe 
+- Checkboxes that match allergens that the recipe contains 
+- Pick an eating diet or cuisine
 
 #### Initiation
 
@@ -216,28 +235,36 @@ password: "string"
 
 #### Existing Features
 
-1. Enrollment and login 
+- Home Page
 
-2. View every one of the plans 
+  - It is used to access the user registration page field, account page, recipes page, create/edit page, sign out link, sign in/sign up page.
 
-3. Channel and sort plans 
+- Sign Up
 
-4. Search through every one of the plans dependent on a catchphrase 
+  - I have used for a user to register for an account so they can log in into the app.
 
-5. Various select menus that permit barring plans containing certain allergen/allergens 
+- Sign In
 
-6. Enlisted clients can include plans 
+  - Used for a user to login to the app so to access and utilise all available features.
 
-7. Enlisted clients approach their very own Cook Book. Where they can see, alter and erase their plans 
+- MongoDB (NoSQL Database)
 
-#### Other Features
+  - Stores recipe and user objects.
 
-Recipes get added to the application by means of a dynamic structure, that permits to: 
+- Create Page
+  - It is applied for a user to create recipe data.
 
-- Include/erase fixings/steps. 
-- Include an image for every recipe recipe 
-- Checkboxes that match allergens that the recipe contains 
-- Pick an eating diet or cuisine
+- Edit Page
+  - For user to update and delete recipe data.
+
+- View Page
+  - It is for a user to update and delete recipe data.
+
+- Recipe Page
+  - Allows a  user to read all recipes within the app.
+
+- Account Page
+  - Allows a user to read all recipes created by themselves.
 
 #### Features Left to Implement
 
