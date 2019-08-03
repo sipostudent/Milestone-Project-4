@@ -6,12 +6,6 @@ from flask import render_template, url_for, request, session, redirect, jsonify
 from flask_pymongo import PyMongo, pymongo
 from bson.objectid import ObjectId
 
-# TODO: Add remaining docstrings to all the functions
-# TODO: Double check the HTML templates for formatting issues
-# TODO: Add classes to correct card styles on recipes and account pages
-# TODO: Add a message on the account page for when users have no recipes of their own.
-#       Use {% if count == 0%} and flexbox styles
-
 app = Flask(__name__)
 app.secret_key = 'any random string'
 app.config["MONGO_URI"] = os.environ.get('MONGO_URI') or "mongodb+srv://root:r00tUser@cluster0-0oagu.gcp.mongodb.net/recipebook?retryWrites=true"
