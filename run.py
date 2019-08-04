@@ -21,8 +21,8 @@ def index():
 
 
 @app.route('/recipes/', methods=['GET', 'POST'])
-@app.route('/recipes/<page>/show/<limit>', methods=['GET', 'POST'])
-def recipes(page=1, limit=12):
+@app.route('/recipes/<page>/<limit>', methods=['GET', 'POST'])
+def recipes(page=1, limit=8):
     '''Limits the number of recipes shown on a page to a certain number. 
     Generates pagination dynamically based on the number of records in the database.'''
     limit = int(limit)
@@ -31,10 +31,12 @@ def recipes(page=1, limit=12):
         limit = int(request.form['limit'])
     
     page = int(page)
+    #print(page, limit)
     skip = page * limit - limit
     maximum = math.ceil( (mongo.db.recipes.count_documents({})) / limit)
 
-    recipes = list(mongo.db.recipes.find().sort("views", pymongo.DESCENDING).skip(skip).limit(limit))
+    # recipes = list(mongo.db.recipes.find().sort("views", pymongo.DESCENDING).skip(skip).limit(limit))
+    recipes = list(mongo.db.recipes.find().sort("$natural", pymongo.DESCENDING).skip(skip).limit( limit ))
     return render_template(
         'recipes.html',
         title='Recipes | Veggit',
@@ -76,6 +78,7 @@ def dislike(id):
 def create():
     # check for logged in user
     email = session.get('email')
+    inserted_id = 0
     if not email:
         return redirect(url_for('login'))
 
@@ -96,8 +99,10 @@ def create():
                 time=current_time,
                 date=current_date
             )
-            inserted = mongo.db.recipes.insert_one(recipe)
-            return redirect(url_for('view', id=inserted.inserted_id))
+            #inserted = mongo.db.recipes.insert_one(recipe)
+            inserted_id = mongo.db.recipes.insert_one(recipe).inserted_id
+        print(inserted_id)
+        return redirect(url_for('recipes'))
 
     return render_template('create.html', title='Create Recipe | Veggit')
 
@@ -189,12 +194,12 @@ def account(page=1):
     if not email:
         return redirect(url_for('register'))
 
-    limit = 12
+    limit = 8
     page = int(page)
     skip = page * limit - limit
-    maximum = math.ceil(mongo.db.recipes.count_documents({"email": email}) / 12)
+    maximum = math.ceil(mongo.db.recipes.count_documents({"email": email}) / 8)
     count = mongo.db.recipes.find({ "email": email }).count()
-    recipes = list(mongo.db.recipes.find({"email": email}).sort("$natural", pymongo.DESCENDING).skip(skip).limit( 12 ))
+    recipes = list(mongo.db.recipes.find({"email": email}).sort("$natural", pymongo.DESCENDING).skip(skip).limit( 8 ))
     
     return render_template(
         'account.html',
@@ -243,5 +248,5 @@ def register():
 
 # Run App
 if __name__ == '__main__':
-    app.run(host=os.environ.get('IP', '0.0.0.0'),
-            port=os.environ.get('PORT', '5000'))
+    app.run(host=os.environ.get('IP', '127.0.0.1'),
+            port=os.environ.get('PORT', '5000'), debug=True)
