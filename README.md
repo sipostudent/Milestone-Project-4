@@ -15,52 +15,51 @@ This project is a fictional service, based on a real-world application, which of
 
 <!--ts-->
 
-- [About](#About)
+1. [About](#About)
 
-  - [Goal](#Goal)
-  - [Functionality (User Stories)](#Functionality-User-Stories)
-  - [Initiation](#Initiation)
+    - [Goal](#Goal)
+    - [Functionality (User Stories)](#Functionality-User-Stories)
+    - [Initiation](#Initiation)
 
-- [UX](#UX)
+2. [UX](#UX)
 
-  - [Layout Pro](#Layout-Pro-Boundless-Adaptability)
-  - [Layout Con](#Layout-Con-Moderate-Speed-and-Execution)
-  - [Tablet Display](#Tablet-Display)
-  - [Mobile Display](#Mobile-Display)
-  - [Additional Note](#Additional-Note)
-  - [Colour Scheme](#Colour-Scheme)
-  - [Font](#Font)
-  - [Navigation](#Navigation)
-  - [Database Structure](#Database-Structure)
+    - [Layout Pro](#Layout-Pro-Boundless-Adaptability)
+    - [Layout Con](#Layout-Con-Moderate-Speed-and-Execution)
+    - [Tablet Display](#Tablet-Display)
+    - [Mobile Display](#Mobile-Display)
+    - [Additional Note](#Additional-Note)
+    - [Colour Scheme](#Colour-Scheme)
+    - [Font](#Font)
+    - [Navigation](#Navigation)
+    - [Database Structure](#Database-Structure)
 
-- [Technologies](#Technologies)
+3. [Technologies](#Technologies)
 
-  - [Languages Frameworks Tools](#Languages-Frameworks-Tools)
-  - [Other-Resources](#Other-Resources)
+    - [Languages Frameworks Tools](#Languages-Frameworks-Tools)
+    - [Other-Resources](#Other-Resources)
 
-- [Features](#Features)
+    - [Features](#Features)
 
-  - [Existing Features](#Existing-Features)
-  - [Features-Left-to-Implement](#Features-Left-to-Implement)
+    - [Existing Features](#Existing-Features)
+    - [Features-Left-to-Implement](#Features-Left-to-Implement)
 
-- [Testing](#Testing)
+4. [Testing](#Testing)
 
-  - [Tools-and-Methods-Used-for-Testing](#Tools-and-Methods-Used-for-Testing)
-  - [Additional-Points](#Additional-Points)
-  - [Tested Sections 1](#Tested-Sections-1)
-  - [Tested Sections 2](#Tested-Sections-2)
+    - [Tools-and-Methods-Used-for-Testing](#Tools-and-Methods-Used-for-Testing)
+    - [Additional-Points](#Additional-Points)
+    - [Tested Sections 1 HTML & CSS](#Tested-Sections-1-HTML-&-CSS)
+    - [Tested Sections 2 Python](#Tested-Sections-2-Python)
 
-- [Deployment](#Deployment)
+5. [Deployment](#Deployment)
 
-  - [How the project got deployed to Heroku](#How-the-project-got-deployed-to-Heroku)
-  - [Cloning the repository](#Cloning-the-repository)
-  - [How to access the live application](#How-to-access-the-live-application)
-  - [How to run things locally](#How-to-run-things-locally)
+    - [How the project got deployed to Heroku](#How-the-project-got-deployed-to-Heroku)
+    - [Cloning the repository](#Cloning-the-repository)
+    - [How to access the live application](#How-to-access-the-live-application)
+    - [How to run things locally](#How-to-run-things-locally)
 
-- [Credits](#Credits)
-
-  - [Content](#Content)
-  - [Acknowledgements](#Acknowledgements)
+6. [Credits](#Credits)
+7. [Content](#Content)
+8. [Acknowledgements](#Acknowledgements)
     <!--te-->
 
 ## About
@@ -359,12 +358,42 @@ Manual testing was embraced for this application and acceptably passed. An examp
 
 #### How the project got deployed to Heroku
 
+1. Make a `requirements.txt` file utilizing the terminal command 'pip freeze > requirements.txt. '
 
-1. Go to [Heroku](https://dashboard.heroku.com/) website.
-2. Select application (online-cookbook-sipo)
-3. In the **Deployment Method** section, check to see if the application is already connected to GitHub. If not connected then click the relevant button to link the Heroku website to the dashboard.
-4. In the **Automatic Deployment** section enable **Automatic Deploys** (optional).
-5. In the **Manual Deploy** section, set the branch to **master** then click **Deploy Branch.**
+2. Make a `Procfile` with the terminal command `echo web: python app.py > Procfile`.
+
+3. `git add` and `git commit` the new prerequisites from the requirements.txt file and Procfile, then 'git push' the undertaking to GitHub. 
+
+4. Go to [Heroku](https://dashboard.heroku.com/) website.
+
+5. Make another application (app) on the [Heroku](https://dashboard.heroku.com/) website by tapping the "New" button on your dashboard. Name your app, followed by selecting Europe as your region. 
+
+6. Select application (online-cookbook-sipo)
+
+7. In the "Deployment Method" section, check to see if the application is already connected to GitHub. If not connected then click the relevant button to link the Heroku website to the dashboard.
+
+8. Affirm the connecting of the Heroku application to the right GitHub repository. 
+
+9. In the application dashboard, click on "Settings" > "Reveal Config Vars". 
+
+10. Set the accompanying config vars: 
+
+| Key | Value |
+ --- | ---
+DEBUG | FALSE
+IP | 0.0.0.0
+MONGO_URI | `mongodb+srv://<username>:<password>@cluster0-0oagu.gcp.mongodb.net/recipebook?retryWrites=true`
+
+PORT | 5000
+SECRET_KEY | `<your_secret_key>`
+
+- To retrieve your MONGO_URI please reference the official MongoDB Atlas documentation [here](https://docs.atlas.mongodb.com/)
+
+11. On the dashboard click "Deploy or alternatively in the "Automatic Deployment" section enable "Automatic Deploys" (optional).
+
+12. In the "Manual Deploy" section, set the branch to "master" then click "Deploy Branch."
+
+
 
 #### Cloning the repository
 
