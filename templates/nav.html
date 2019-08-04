@@ -42,7 +42,7 @@
                                 </a>
                             </li> 
                             <li {% if request.endpoint == 'register' %}class = "active" {% endif %}>
-                                <a class="{% if request.endpoint == 'register' %}whitit three-hundred{% else %}slightly-desaturated-cyan-2 three-hundred{% endif %}" href="{{ url_for('register') }}">Sign Up
+                                <a class="{% if request.endpoint == 'register' %}whitit three-hundred{% else %}slightly-desaturated-cyan-2 three-hundred{% endif %}" href="{{ url_for('register') }}">Register
                                 </a>
                             </li>  
                             
@@ -121,7 +121,7 @@
                         <a href="{{ url_for('login') }}" class="waves-effect"><i class="material-icons {% if request.endpoint == 'login' %}whitit {% else %} blac-2{% endif %}">exit_to_app</i> Sign In</a>
                     </li>
                     <li {% if request.endpoint == 'register' %}class = "active" {% endif %}>
-                        <a href="{{ url_for('register') }}" class="waves-effect"><i class="material-icons {% if request.endpoint == 'register' %}whitit {% else %} blac-2{% endif %}">exit_to_app</i> Sign Up</a>
+                        <a href="{{ url_for('register') }}" class="waves-effect"><i class="material-icons {% if request.endpoint == 'register' %}whitit {% else %} blac-2{% endif %}">exit_to_app</i> Register</a>
                     </li>
                     {% endif %}
                     <li>
