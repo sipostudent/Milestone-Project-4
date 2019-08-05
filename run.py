@@ -35,7 +35,6 @@ def recipes(page=1, limit=8):
     skip = page * limit - limit
     maximum = math.ceil( (mongo.db.recipes.count_documents({})) / limit)
 
-    # recipes = list(mongo.db.recipes.find().sort("views", pymongo.DESCENDING).skip(skip).limit(limit))
     recipes = list(mongo.db.recipes.find().sort("$natural", pymongo.DESCENDING).skip(skip).limit( limit ))
     return render_template(
         'recipes.html',
@@ -99,7 +98,6 @@ def create():
                 time=current_time,
                 date=current_date
             )
-            #inserted = mongo.db.recipes.insert_one(recipe)
             inserted_id = mongo.db.recipes.insert_one(recipe).inserted_id
         print(inserted_id)
         return redirect(url_for('recipes'))
@@ -223,7 +221,7 @@ def register():
     A check is performed to verify that the user email doesn't already exist.
     If the user already exists, the register page is rendered with a user_exists error.
 
-    If the user does not exist, the user is added to the database and the login page is rendered.'''
+    If a user does not exist, the user is added to the database and the login page is rendered.'''
 
     # check for logged in user
     email = session.get('email')
