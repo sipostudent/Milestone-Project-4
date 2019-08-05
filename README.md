@@ -163,8 +163,12 @@ time: "string"
 date: "string"
 }
 
+```
+
+```
 users {
 _id: 5d2dff3f9398ee10830e15f7
+name: "string"
 email: "string"
 password: "string"
 }
@@ -271,7 +275,7 @@ is a semantic markup language utilised as the shell of the site.
 
   - [Python Formatter](https://pythoniter.appspot.com/)
 
-  - Phones
+- Phones
 
   - Galaxy Note 3 (simulation and actual device)
   - Galaxy Note 9
