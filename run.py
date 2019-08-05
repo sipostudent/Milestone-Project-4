@@ -8,7 +8,7 @@ from bson.objectid import ObjectId
 
 app = Flask(__name__)
 app.secret_key = 'any random string'
-app.config["MONGO_URI"] = os.environ.get('MONGO_URI') or "mongodb+srv://root:r00tUser@cluster0-0oagu.gcp.mongodb.net/recipebook?retryWrites=true"
+app.config["MONGO_URI"] = os.environ.get('MONGO_URI')
 mongo = PyMongo(app)
 
 @app.route('/')
