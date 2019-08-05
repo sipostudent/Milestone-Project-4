@@ -46,9 +46,9 @@ This project is a fictional service, based on a real-world application, which of
 4. [Testing](#Testing)
 
     - [Tools-and-Methods-Used-for-Testing](#Tools-and-Methods-Used-for-Testing)
-    - [Additional-Points](#Additional-Points)
     - [Tested Sections 1 HTML & CSS](#Tested-Sections-1-HTML-&-CSS)
     - [Tested Sections 2 Python](#Tested-Sections-2-Python)
+    - [Unresolved Bugs](#Unresolved-Bugs)
 
 5. [Deployment](#Deployment)
 
@@ -337,6 +337,12 @@ Manual testing was embraced for this application and acceptably passed. An examp
 
 [**To top**](#Table-of-Contents)
 
+#### Unresolved Bugs
+
+1. On occasion, when loading the production application in on Heroku, the app will appear to look already signed in as the navigation bar shows the sign-out option which is not, in fact, the case and users will need to create an account in order to save new recipes, but as of yet the bug remains unresolved.
+
+2. The CSS stylesheet is cached, which causes modification problems. New changes to the stylesheet are not visible until the browser cache clears—that is until it deletes the saved version and fetches the stylesheet from scratch again. That could be hours or days, during which time all that is available is an outdated version of the site’s CSS rules. This issue has prevented a preference for wanting to amend some of the general typography to a darker shade Hex colour to accommodate light shade backgrounds.
+
 ## Deployment
 
 #### How the project got deployed to Heroku
@@ -410,6 +416,8 @@ Deploy your changes, make some changes to the code you just cloned and deploy th
 ```
 
 3. Install all of the prerequisites shown in the requirements.txt file via opening a Command-line interface (CLI) and navigating to the project root or by opening an integrated terminal and entering the following command:
+
+> Please Note: The CLI method for interacting with a computer may vary dependant upon the operating system in use.
 
 ```console
 pip install -r requirements.txt
