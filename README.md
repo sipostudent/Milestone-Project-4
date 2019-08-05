@@ -178,28 +178,17 @@ password: "string"
 #### Languages Frameworks Tools
 
 - [HTML](https://www.w3.org/TR/html5/ "HTML5 Official Site")
+is a semantic markup language utilised as the shell of the site.
 
-  - Semantic markup language utilised as the shell of the site.
+- [CSS](https://www.w3.org/Style/CSS/ "Cascading Style Sheets Official Site") means Cascading Style Sheets and was used on the design of the site.
 
-- [CSS](https://www.w3.org/Style/CSS/ "Cascading Style Sheets Official Site")
+- [Python](www.python.org) was utilised to compose the game logic.
 
-  - It is Cascading Style Sheets as the design of the site.
+- [Flask](https://flask.palletsprojects.com/en/1.0.x/) is a Python web framework, library used for developing web applications.
 
-- [Python](www.python.org)
+- [MongoDB](https://www.mongodb.com/) is a NoSQL database program, to implement a data-store using JSON-like documents with schema. 
 
-  - I have utilised to compose the game logic.
-
-- [Flask](https://flask.palletsprojects.com/en/1.0.x/)
-
-  - Python web framework, library used for developing web applications.
-
-- [MongoDB](https://www.mongodb.com/)
-
-  - NoSQL database program, to implement a data-store using JSON-like documents with schema. 
-
-- [Jinja2](http://jinja.pocoo.org/docs/2.10/)
-
-  - Utilised to render HTML templates, imparting between front-end and back-end.
+- [Jinja2](http://jinja.pocoo.org/docs/2.10/) was utilised to render HTML templates, imparting between front-end and back-end.
 
 - [jQuery](http://jquery.com/ "jQuery Official Site")
 
