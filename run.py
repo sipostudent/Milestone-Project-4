@@ -130,7 +130,10 @@ def edit(id):
             )
 
             mongo.db.recipes.replace_one({"_id": ObjectId(id)}, update_recipe)
-            return redirect(url_for('view', id=id))
+            
+        print(id)
+        
+        return redirect(url_for('view', id=id))
 
     return render_template('edit.html', title='Edit Recipe | Veggit', recipe=recipe)
 

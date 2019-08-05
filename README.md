@@ -145,7 +145,7 @@ Opted for a neutral style template with a pencil type design to project a more i
 #### Database Structure
 
 ```console
-recipes {
+recipes: {
 _id: 5d433657ddab2ebc9620c441
 allergens: Array
 diet: ""
@@ -165,8 +165,8 @@ date: "string"
 
 ```
 
-```
-users {
+```console
+users: {
 _id: 5d2dff3f9398ee10830e15f7
 name: "string"
 email: "string"
@@ -341,9 +341,9 @@ Manual testing was embraced for this application and acceptably passed. An examp
 
 #### How the project got deployed to Heroku
 
-1. Make a `requirements.txt` file utilizing the terminal command 'pip freeze > requirements.txt. '
+1. Make a `requirements.txt` file utilizing the terminal command 'pip freeze > `requirements.txt`
 
-2. Make a `Procfile` with the terminal command `echo web: python app.py > Procfile`.
+2. Make a `Procfile` with the terminal command `echo web: python app.py > Procfile`
 
 3. `git add` and `git commit` the new prerequisites from the requirements.txt file and Procfile, then 'git push' the undertaking to GitHub. 
 
@@ -351,7 +351,7 @@ Manual testing was embraced for this application and acceptably passed. An examp
 
 5. Make another application (app) on the [Heroku](https://dashboard.heroku.com/) website by tapping the "New" button on your dashboard. Name your app, followed by selecting Europe as your region. 
 
-6. Select application (online-cookbook-sipo)
+6. Select application
 
 7. In the "Deployment Method" section, check to see if the application is already connected to GitHub. If not connected then click the relevant button to link the Heroku website to the dashboard.
 
@@ -380,7 +380,7 @@ SECRET_KEY | `<your_secret_key>`
 
 #### Cloning the repository
 
-1. Open Git Bash
+1. Open in terminal
 2. Change the present working directory to the area where you wish to place the cloned directory.
 3. Clone the repository or use the link below.
 
