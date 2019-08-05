@@ -190,25 +190,15 @@ is a semantic markup language utilised as the shell of the site.
 
 - [Jinja2](http://jinja.pocoo.org/docs/2.10/) was utilised to render HTML templates, imparting between front-end and back-end.
 
-- [jQuery](http://jquery.com/ "jQuery Official Site")
+- [jQuery](http://jquery.com/ "jQuery Official Site") is used for HTML document traversal and manipulation, event handling.
 
-  - HTML document traversal and manipulation, event handling.
+- [javascript](https://www.javascript.com/ "Javascript Official Site") is used to create responsive, interactive elements for web pages, enhancing the user experience.
 
-- [javascript](https://www.javascript.com/ "Javascript Official Site")
+- [Materialize](https://materializecss.com/ "Materialize Official Site") is utilised for developing the entire UI and consistent throughout
 
-  - Used to create responsive, interactive elements for web pages, enhancing the user experience.
+- [Google Fonts](https://fonts.google.com/ "Google Fonts Official Site") provides the Saira font applied across the entire website
 
-- [Materialize](https://materializecss.com/ "Materialize Official Site")
-
-  - Utilised for developing the entire UI and consistent throughout
-
-- [Google Fonts](https://fonts.google.com/ "Google Fonts Official Site")
-
-  - Saira font applied across the entire website
-
-- [Font Awesome](https://fontawesome.com/ "Fontawesome Official Site")
-
-  - Source for all utilised icons
+- [Font Awesome](https://fontawesome.com/ "Fontawesome Official Site") is the source for all utilised icons
 
   #### Other Resources
 
