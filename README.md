@@ -122,7 +122,7 @@ Research to understand what apps of similar scope were already doing in terms of
 
 #### Mobile Display
 
-- This image animation represents the standard UI across most modern mobile devices.
+- This image represents the standard UI across most modern mobile devices.
 
 <img src="static/img/veggit-mobile.png" width="600">
 
@@ -130,17 +130,15 @@ Research to understand what apps of similar scope were already doing in terms of
 
 #### Template Style
 
-Opted for a neutral style template with a pencil type design to project a more industrial look to the application whic was acheived via use of Bootstrap and [Bootswatch](https://bootswatch.com/ "Bootswatch Official Site")
+Opted for a neutral style template with a pencil type design to project a more industrial look to the application whic was acheived via use of Materialize [Materialize](https://materializecss.com/ "Materialize Official Site")
 
 #### Font
 
-- Being as the website modelling is off a space theme, a pencil typeface choice was selected; thus, helping to emphasise a rough industrial theme to the displayed text content; a subjective opinion, of course.
+- Being as the website modelling is off a vegetarian theme, the Josefin Sans Font Family choice was selected. The typeface is geometric, elegant, and has a vintage feeling; thus, helping to emphasise a soft natural vibe to the displayed text content which I felt was appropiate for a food app; a subjective opinion, of course.
 
 #### Navigation
 
-- Fixed navigation makes it easier for users to browse the website and increase retention: In some ways, it's a passive call to action; always visible, always available.
-
-- Maintaining the logo visible increases brand value. Today there is an enormous number of apps, many with identical or similar features, so I feel that it’s vital to make a good impact on users and retain their interest, which can be all linked to a good brand image.
+- A navigation bar takes up space and a fixed one even more. That being the case, and that there is a lot of content to display in the form of recipes, etc., I deemed it not necessary to fix the navigation as there was no real advantage.
 
 #### Database Structure
 
