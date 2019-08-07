@@ -130,7 +130,7 @@ Research to understand what apps of similar scope were already doing in terms of
 
 #### Template Style
 
-Opted for a neutral style template with a pencil type design to project a more industrial look to the application which was acheived via use of [Materialize](https://materializecss.com/ "Materialize Official Site") framework.
+I opted for the [Materialize](https://materializecss.com/ "Materialize Official Site") framework. As a tool, Bootstrap is excellent to get started, but I feel it cannot create a real quality UI without the need to write a considerable amount of custom CSS to get anywhere close to the look and feel of Materialize which looks great even out of the box.
 
 #### Font
 
