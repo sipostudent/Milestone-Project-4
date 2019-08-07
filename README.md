@@ -198,7 +198,7 @@ is a semantic markup language utilised as the shell of the site.
 
 - [Materialize](https://materializecss.com/ "Materialize Official Site") is utilised for developing the entire UI and consistent throughout, also including Material Design Icons courtesy of Google.
 
-- [Google Fonts](https://fonts.google.com/ "Google Fonts Official Site") provides the Saira font applied across the entire website
+- [Google Fonts](https://fonts.google.com/ "Google Fonts Official Site") provides the Josefin Sans and sans-serif fonts applied across the entire website
 
 - [Font Awesome](https://fontawesome.com/ "Fontawesome Official Site") is the source for the social media icons.
 
