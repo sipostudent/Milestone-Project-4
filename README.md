@@ -130,7 +130,7 @@ Research to understand what apps of similar scope were already doing in terms of
 
 #### Template Style
 
-Opted for a neutral style template with a pencil type design to project a more industrial look to the application whic was acheived via use of Materialize [Materialize](https://materializecss.com/ "Materialize Official Site")
+Opted for a neutral style template with a pencil type design to project a more industrial look to the application which was acheived via use of [Materialize](https://materializecss.com/ "Materialize Official Site") framework.
 
 #### Font
 
@@ -177,7 +177,7 @@ password: "string"
 
 ## Technologies
 
-#### Languages Frameworks Tools
+#### Languages, Libraries & Frameworks
 
 - [HTML](https://www.w3.org/TR/html5/ "HTML5 Official Site")
 is a semantic markup language utilised as the shell of the site.
@@ -196,11 +196,11 @@ is a semantic markup language utilised as the shell of the site.
 
 - [javascript](https://www.javascript.com/ "Javascript Official Site") is used to create responsive, interactive elements for web pages, enhancing the user experience.
 
-- [Materialize](https://materializecss.com/ "Materialize Official Site") is utilised for developing the entire UI and consistent throughout
+- [Materialize](https://materializecss.com/ "Materialize Official Site") is utilised for developing the entire UI and consistent throughout, also including Material Design Icons courtesy of Google.
 
 - [Google Fonts](https://fonts.google.com/ "Google Fonts Official Site") provides the Saira font applied across the entire website
 
-- [Font Awesome](https://fontawesome.com/ "Fontawesome Official Site") is the source for all utilised icons
+- [Font Awesome](https://fontawesome.com/ "Fontawesome Official Site") is the source for the social media icons.
 
   #### Other Resources
 
